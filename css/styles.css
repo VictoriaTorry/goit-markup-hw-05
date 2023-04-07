@@ -684,8 +684,7 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
 
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1),
-    transforms 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -698,14 +697,16 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   width: 528px;
   height: 580px;
   background-color: #ffffff;
+
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .backdrop-modal {
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: translate(-50%, -50%) scale(0.8);
 }
 
 .backdrop-modal-close {
